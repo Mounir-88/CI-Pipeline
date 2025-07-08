@@ -17,11 +17,15 @@ function Home() {
 
 const containerStyle = {
   padding: '20px',
+  maxWidth: '1200px',
+  margin: '0 auto',
 };
 
 const gridStyle = {
   display: 'flex',
   flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: '20px',
 };
 
 export default Home;
