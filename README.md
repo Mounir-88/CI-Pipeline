@@ -14,4 +14,4 @@ If you are developing a production application, we recommend using TypeScript wi
 ![React CI/CD](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/ci.yml/badge.svg)
 
 
-Press link to Run [text](https://mounir-88.github.io/CI-Pipeline/)
+Press link to Run [Link](https://mounir-88.github.io/CI-Pipeline/)
