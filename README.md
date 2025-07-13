@@ -1,17 +1,39 @@
-# React + Vite
+# CI Pipeline Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![CI Status](https://github.com/mounir-88/CI-Pipeline/actions/workflows/ci.yml/badge.svg)
+![Deploy Status](https://github.com/mounir-88/CI-Pipeline/actions/workflows/deploy.yml/badge.svg)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-![React CI/CD](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/ci.yml/badge.svg)
+## 🚀 Live Demo
+[https://mounir-88.github.io/CI-Pipeline](https://mounir-88.github.io/CI-Pipeline)
 
 
-Press link to Run [Link](https://mounir-88.github.io/CI-Pipeline/)
+
+## ⚙️ Pipeline Architecture
+
+This project uses **GitHub Actions** for CI/CD with two workflows:
+
+- `ci.yml`:
+  - Runs on every push to `main`
+  - Performs:
+    - ✅ Code Linting (`npm run lint`)
+    - ✅ Unit Testing with Vitest (`npm run test`)
+    - ✅ Coverage enforcement (min 70%)
+    - ✅ Build step with Vite
+
+- `deploy.yml`:
+  - Runs on every push to `main`
+  - Builds the app (`npm run build`)
+  - Deploys to **GitHub Pages** using `peaceiris/actions-gh-pages`
+  - Uses `dist/` as the deploy folder
+
+**Deployment URL:**  
+➡️ [https://mounir-88.github.io/CI-Pipeline](https://mounir-88.github.io/CI-Pipeline)
+
+## 🛠 Troubleshooting
+
+### Blank Page After Deployment?
+- Make sure `vite.config.js` has:  
+  ```js
+  base: '/CI-Pipeline/'
+
+
